@@ -1,0 +1,35 @@
+---
+- hosts: droplets
+  gather_facts: no
+  vars:
+    ssh_key_name: "{{ lookup('env', 'USER') }}"
+    ssh_key_path: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
+    do_client_id: "{{ lookup('env', 'DO_CLIENT_ID') }}"
+    do_api_key: "{{ lookup('env', 'DO_API_KEY') }}"
+  tasks:
+    - digital_ocean: >
+        state=present
+        command=ssh
+        name="{{ ssh_key_name }}"
+        ssh_pub_key="{{ lookup('file', ssh_key_path) }}"
+        client_id="{{ do_client_id }}"
+        api_key="{{ do_api_key }}"
+      register: do
+      run_once: true
+      delegate_to: localhost
+
+    - digital_ocean: >
+        state=present
+        unique_name=yes
+        name="{{ inventory_hostname }}"
+        ssh_key_ids="{{ do.ssh_key.id }}"
+        client_id="{{ do_client_id }}"
+        api_key="{{ do_api_key }}"
+        size_id="{{ vars[do_size] }}"
+        region_id="{{ vars[do_region] }}"
+        image_id="{{ vars[do_image] }}"
+      register: do
+      delegate_to: localhost
+
+    - set_fact:
+        ansible_ssh_host: "{{ do.droplet.ip_address }}"

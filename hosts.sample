@@ -1,0 +1,5 @@
+localhost ansible_python_interpreter=/usr/bin/python
+
+[droplets]
+droplet1.example.net do_size=do_size_1gb do_region=do_region_sfo1 do_image=do_image_ubuntu1410x64
+droplet2.example.net do_size=do_size_1gb do_region=do_region_sfo1 do_image=do_image_ubuntu1410x64
