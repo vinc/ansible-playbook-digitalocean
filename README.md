@@ -8,7 +8,7 @@ for [DigitalOcean](https://www.digitalocean.com/).
 Usage
 -----
 
-    $ git clone https://github.com/vinua/ansible-playbook-digitalocean.git
+    $ git clone https://github.com/vinc/ansible-playbook-digitalocean.git
     $ cd ansible-playbook-digitalocean
     $ sudo pip install -r requirements.txt
     $ export DO_CLIENT_ID=XXX DO_API_KEY=XXX
@@ -20,9 +20,9 @@ Configuration
 
 The inventory file `hosts` defines the droplets to be created on DigitalOcean.
 
-  [droplets]
-  droplet1.example.net do_size=do_size_1gb do_region=do_region_sfo1 do_image=do_image_ubuntu1410x64
-  droplet2.example.net do_size=do_size_1gb do_region=do_region_sfo1 do_image=do_image_ubuntu1410x64
+    [droplets]
+    droplet1.example.net do_size=do_size_1gb do_region=do_region_sfo1 do_image=do_image_ubuntu1410x64
+    droplet2.example.net do_size=do_size_1gb do_region=do_region_sfo1 do_image=do_image_ubuntu1410x64
 
 The variables `do_size`, `do_region`, and `do_image` can be anything defined
 in `group_vars/droplets.yml`.
