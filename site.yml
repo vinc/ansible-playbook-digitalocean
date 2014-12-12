@@ -25,9 +25,9 @@
         ssh_key_ids="{{ do.ssh_key.id }}"
         client_id="{{ do_client_id }}"
         api_key="{{ do_api_key }}"
-        size_id="{{ vars[do_size] }}"
-        region_id="{{ vars[do_region] }}"
-        image_id="{{ vars[do_image] }}"
+        size_id="{{ do_sizes[do_size] }}"
+        region_id="{{ do_regions[do_region] }}"
+        image_id="{{ do_images[do_image] }}"
       register: do
       delegate_to: localhost
 

@@ -39,8 +39,9 @@ They must be specified via environment variables (DO_CLIENT_ID and DO_API_KEY)''
         # Print YAML
         print '---'
         for k in ['regions', 'images', 'sizes']:
+            print 'do_%s:' % k
             for d in self.data[k]:
-                print 'do_%s_%s: %s' % (k[0:-1], d['slug'].replace('-', ''), d['id'])
+                print '  do_%s_%s: %s' % (k[0:-1], d['slug'].replace('-', ''), d['id'])
 
 
     ###########################################################################

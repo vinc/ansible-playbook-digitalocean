@@ -1,56 +1,59 @@
 ---
-do_region_sfo1: 3
-do_region_nyc2: 4
-do_region_ams2: 5
-do_region_sgp1: 6
-do_region_lon1: 7
-do_region_nyc3: 8
-do_region_ams3: 9
-do_image_coreosstable: 8717624
-do_image_coreosbeta: 8717625
-do_image_coreosalpha: 8846778
-do_image_fedora20x64: 6370882
-do_image_fedora20x32: 6370885
-do_image_fedora19x64: 6370968
-do_image_fedora19x32: 6370969
-do_image_centos65x32: 6372105
-do_image_centos65x64: 6372108
-do_image_centos58x64: 6372321
-do_image_centos58x32: 6372425
-do_image_debian70x64: 6372526
-do_image_debian70x32: 6372528
-do_image_debian60x64: 6372581
-do_image_debian60x32: 6372662
-do_image_ubuntu1004x64: 6374124
-do_image_ubuntu1004x32: 6374125
-do_image_ubuntu1204x64: 6374128
-do_image_ubuntu1204x32: 6374130
-do_image_ubuntu1404x32: 6918735
-do_image_ubuntu1404x64: 6918990
-do_image_centos70x64: 7053293
-do_image_ubuntu1410x64: 7111343
-do_image_ubuntu1410x32: 7111572
-do_image_rubyonrails: 6376601
-do_image_wordpress: 6423475
-do_image_lemp: 6732690
-do_image_lamp: 6732691
-do_image_django: 6734697
-do_image_mean: 6798184
-do_image_owncloud: 8100271
-do_image_node: 8102573
-do_image_gitlab: 8228944
-do_image_docker: 8345531
-do_image_drupal: 8375425
-do_image_dokku: 8383942
-do_image_magento: 8412876
-do_image_ghost: 8720649
-do_image_redmine: 7572830
-do_size_512mb: 66
-do_size_1gb: 63
-do_size_2gb: 62
-do_size_4gb: 64
-do_size_8gb: 65
-do_size_16gb: 61
-do_size_32gb: 60
-do_size_48gb: 70
-do_size_64gb: 69
+do_regions:
+  do_region_sfo1: 3
+  do_region_nyc2: 4
+  do_region_ams2: 5
+  do_region_sgp1: 6
+  do_region_lon1: 7
+  do_region_nyc3: 8
+  do_region_ams3: 9
+do_images:
+  do_image_coreosstable: 8717624
+  do_image_coreosbeta: 8924796
+  do_image_coreosalpha: 8925622
+  do_image_fedora20x64: 6370882
+  do_image_fedora20x32: 6370885
+  do_image_fedora19x64: 6370968
+  do_image_fedora19x32: 6370969
+  do_image_centos65x32: 6372105
+  do_image_centos65x64: 6372108
+  do_image_centos58x64: 6372321
+  do_image_centos58x32: 6372425
+  do_image_debian70x64: 6372526
+  do_image_debian70x32: 6372528
+  do_image_debian60x64: 6372581
+  do_image_debian60x32: 6372662
+  do_image_ubuntu1004x64: 6374124
+  do_image_ubuntu1004x32: 6374125
+  do_image_ubuntu1204x64: 6374128
+  do_image_ubuntu1204x32: 6374130
+  do_image_ubuntu1404x32: 6918735
+  do_image_ubuntu1404x64: 6918990
+  do_image_centos70x64: 7053293
+  do_image_ubuntu1410x64: 7111343
+  do_image_ubuntu1410x32: 7111572
+  do_image_rubyonrails: 6376601
+  do_image_wordpress: 6423475
+  do_image_lemp: 6732690
+  do_image_lamp: 6732691
+  do_image_django: 6734697
+  do_image_mean: 6798184
+  do_image_owncloud: 8100271
+  do_image_node: 8102573
+  do_image_gitlab: 8228944
+  do_image_docker: 8345531
+  do_image_drupal: 8375425
+  do_image_dokku: 8383942
+  do_image_magento: 8412876
+  do_image_ghost: 8720649
+  do_image_redmine: 7572830
+do_sizes:
+  do_size_512mb: 66
+  do_size_1gb: 63
+  do_size_2gb: 62
+  do_size_4gb: 64
+  do_size_8gb: 65
+  do_size_16gb: 61
+  do_size_32gb: 60
+  do_size_48gb: 70
+  do_size_64gb: 69
