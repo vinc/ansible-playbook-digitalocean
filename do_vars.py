@@ -41,6 +41,8 @@ They must be specified via environment variables (DO_CLIENT_ID and DO_API_KEY)''
         for k in ['regions', 'images', 'sizes']:
             print 'do_%s:' % k
             for d in self.data[k]:
+                if 'slug' not in d:
+                    continue
                 print '  do_%s_%s: %s' % (k[0:-1], d['slug'].replace('-', ''), d['id'])
 
 
